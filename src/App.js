@@ -1,11 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
-import FormKajal from './FormValidate';
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+
+import Form from './Form';
+
+import DataTable from './DataTable';
+
+
+import "bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
   return (
     <div>
-      <FormKajal></FormKajal>
+      <BrowserRouter>
+
+<Routes>
+
+  <Route path="/" element={<Form/>}></Route>
+
+  <Route path="/Datatable" element={<DataTable/>}></Route>
+
+</Routes >
+
+</BrowserRouter>
     </div>
   );
 }
